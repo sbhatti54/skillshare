@@ -19,3 +19,6 @@ doc/
 .DS_Store
 #ignore paperclip uploaded files
 /public/system
+
+#ignore sampleimages
+/sampleimages
