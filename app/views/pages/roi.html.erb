@@ -2,28 +2,39 @@
 <link rel="stylesheet" title="Standard" href="/assets/common.css" type="text/css" media="screen" />
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div class="span4">
+	<h1 id="calculator">ROI Calculator</h1>
+		<div class="span3">
 			<div align="center">
-				<h1 id="calculator">ROI Calculator</h1>
 			</div>
 			<div align="center">
 				<form class="form-horizontal" role="form" method="post" action="/roi/calculate">
 				<div id="box1">
-				<h1 id="title">Cost:</h1>
-					<input id="name" type="num" name="coc" placeholder="Cost of Campaign">
-					<input id="name" type="num" name="cpr" placeholder="Cost Per Redemption">
-					<input id="name" type="num" name="redemptions" placeholder="Number of Redemptions">
+				<h1 id="title">Email Cost:</h1>
+					<input id="name" type="number" name="ecoc" placeholder="Cost of Campaign">
+					<input id="name" type="number" step="any" name="cpr" placeholder="Cost Per Redemption">
+					<input id="name" type="number" name="red" placeholder="Number of Redemptions">
 				</div>
 				<br><br>
 				<div id="box2">
-					<input id="name" type="num" name="rev" placeholder="Revenue per Redemption">
+				<h1 id="title">Email Revenue:</h1>
+					<input id="name" type="number" name="rev" placeholder="Revenue per Redemption">
 				</div>
 					<button id="btnGo"  class="btn-cal btn-large btn-primary">Calculate</button> 
-				</form>
+				
 			</div>
 		</div>
 	</div>
-	<div class="span6">
+	<div class="row-fluid">
+		<div class="span3 col2">
+						<div id="box3">
+						<h1 id="title">Email with Wallet Manager ROI:</h1>
+							<input id="name1" type="number" name="wmcoc" placeholder="Cost of Campaign">	
+						</div>
+						<br><br>
+			</div>
+		</div>
+		</form>
+	<div class="span3 calculator">
 			<div id="calculator">
 				<!-- Screen and clear key -->
 				<div class="top">

@@ -8,6 +8,7 @@ input{
 	height: 43px !important;
 	border-radius: 0px !important;
 	width: 90%;
+	-webkit-appearance: none;
 }
 
 form{
@@ -15,9 +16,15 @@ form{
 }
 
 .btn-cal{
-	margin: 10px auto 0 auto;
-	width: 90%;
 	border-radius: 0px;
+	margin: 10px auto 0 133%;
+	width: 150%;
+	border-radius: 0px;
+}
+
+.btn-back{
+	width: 50%;
+	height: 33px;
 }
 
 h1#results{
@@ -31,20 +38,59 @@ h1#cost{
 	font-size: 1em;
 }
 
+h1#title{
+	font-size: 1em !important;
+	color: #fff !important;
+}
+
 #box1{
 	background-color: #525250;
-	height: 180px;
+	height: 220px;
 }
 
 #box2{
 	background-color: #525250;
-	height: 70px;
+	height: 120px;
+}
+
+#box3{
+	background-color: #525250;
+	height: 372px;
+	margin: 0 auto 0 auto;
+	position: absolute;
+	left: 188px;
+	width: 100%;
+	-moz-box-shadow:3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  	box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+#name1{
+	margin: 10px auto 0 20px !important;
+}
+
+.col2{
+	margin-top: -448px;
+	left: 400px;
+	position: absolute;
+}
+
+table{
+	margin-left: 10px;
+	width: 50% !important;
+	margin-top: 10px;
+}
+
+h1#roi{
+	margin-top: 90px;
+	font-size: 2em;
+	width: 90%;
 }
 
 @media (min-width: 1200px){
-	.span6 {
+	.calculator {
 	width: 570px;
-	margin: -400px auto 0 500px;
+	margin: -548px auto 0 700px;
 	}
 
 }
