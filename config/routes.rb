@@ -4,9 +4,15 @@ DaysOfImpact::Application.routes.draw do
 
   devise_for :users
 
- get 'about' => 'pages#about'
- 
- root :to => 'pins#index'
+match 'about' => 'pages#about'
+match 'animation' => 'pages#animation'
+match 'coverflow' => 'pages#coverflow'
+match 'cat' => 'pages#cat'
+match 'tetris' => 'pages#tetris'
+match 'roi' => 'pages#roi'
+match '/roi/calculate' => 'pages#calculate', :via => :post
+match '/roi/results'=> 'pages#results'
+root :to => 'pins#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

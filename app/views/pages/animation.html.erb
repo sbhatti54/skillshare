@@ -1,0 +1,98 @@
+<style type="text/css">
+        body{
+
+    background-color:#ccc;
+
+    }
+
+    .container{
+
+    background-color:#fff;
+
+    width:500px;
+
+    margin:0 auto;
+
+    color:#000;
+
+    overflow:hidden;
+    
+    height:400px;
+    
+  -webkit-border-radius: 12px; 
+     -moz-border-radius: 12px; 
+          border-radius: 12px; 
+          
+          
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+
+  -webkit-box-shadow: 0px 0px 4px #ffffff; 
+     -moz-box-shadow: 0px 0px 4px #ffffff; 
+          box-shadow: 0px 0px 4px #ffffff; 
+
+    }
+    
+    .container span
+    {
+      position:absolute;
+      background:green;
+      top:40%;
+      width:500px;
+      height:110px;
+      text-indent:-5000px;
+      z-index:10;
+      left:-700px;
+    
+    }
+
+    .flying-text{
+          left:-100px;
+          top:40%;
+          position:absolute;
+          z-index:9999;
+          font-size:32px;
+          font-family:vivaldi;
+
+    }
+
+</style>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Raphaël · Animation</title>
+        <link rel="stylesheet" href="http://raphaeljs.com/demo.css"media="screen">
+        <link rel="stylesheet" href="http://raphaeljs.com/demo-print.css"media="print">
+        <style media="screen">
+            #holder {
+                height: 419px;
+                margin: -205px 0 0 -305px;
+                width: 619px;
+            }
+        </style>
+        <script src="http://raphaeljs.com/raphael.js"></script>
+
+        <script>
+            Raphael.fn.arrow = function (x, y) {
+                return this.path(["M", x, y] + "m-10-10l20,0 0-6 10,16 -10,16 0-6 -20,0 0,6 -10-16 10-16z").attr({fill: "#fff", stroke: "none", "stroke-dasharray": "-", "fill-opacity": 0.2});
+            };
+            window.onload = function () {
+                // var r = Raphael("holder", 619, 419),
+                var r = Raphael("holder", 619, 419), //Raphael(0, 0, "100%", "100%"),
+                    dashed = {fill: "none", stroke: "#666", "stroke-dasharray": "- "};
+                // Path 3
+                (function () {
+                    var el = r.path("M20,290c0-20 40,20 40,0").attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
+                        elattrs = [{path: "M20,290c0-20 40,20 40,0c0-20 -40,20 -40,0z"}, {path: "M20,290c0-20 40,20 40,0c"}],
+                        now = 1;
+                    r.arrow(90, 290).node.onclick = function () {
+                        el.stop().animate(elattrs[+(now = !now)], 1000);
+                    };
+                })();
+            };
+        </script>
+    </head>
+    <body>
+        <div id="holder"></div>
+    </body>
+</html>

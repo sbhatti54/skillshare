@@ -1,0 +1,50 @@
+h1#calculator{
+	font-size: 1.2em;
+	background-color: none !important;
+}
+
+input{
+	margin: 10px auto 0 auto !important;
+	height: 43px !important;
+	border-radius: 0px !important;
+	width: 90%;
+}
+
+form{
+	margin: -46px 0 20px;
+}
+
+.btn-cal{
+	margin: 10px auto 0 auto;
+	width: 90%;
+	border-radius: 0px;
+}
+
+h1#results{
+	margin: 100px auto 0 auto;
+	color: #ff0018;
+	font-size: 2em;
+}
+
+h1#cost{
+	color: #fff !important;
+	font-size: 1em;
+}
+
+#box1{
+	background-color: #525250;
+	height: 180px;
+}
+
+#box2{
+	background-color: #525250;
+	height: 70px;
+}
+
+@media (min-width: 1200px){
+	.span6 {
+	width: 570px;
+	margin: -400px auto 0 500px;
+	}
+
+}
